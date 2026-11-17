@@ -16,9 +16,11 @@ extension UITableView {
       if let dynamicSectionIndexColor = sectionIndexColor?.copy() as? DynamicColor {
         sectionIndexColor = dynamicSectionIndexColor
       }
+      #if os(iOS)
       if let dynamicSeparatorColor = separatorColor?.copy() as? DynamicColor {
         separatorColor = dynamicSeparatorColor
       }
+      #endif
     }
   }
 }

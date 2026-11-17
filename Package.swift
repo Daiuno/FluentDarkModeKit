@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "FluentDarkModeKit",
-    platforms: [.iOS(.v11)],
+    platforms: [.iOS(.v11), .tvOS("15.0")],
     products: [
         .library(name: "FluentDarkModeKit", targets: [
             "DarkModeCore",

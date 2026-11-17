@@ -3,6 +3,7 @@
 //  Licensed under the MIT License.
 //
 
+#if os(iOS)
 extension UIToolbar {
   override open func dmTraitCollectionDidChange(_ previousTraitCollection: DMTraitCollection?) {
     super.dmTraitCollectionDidChange(previousTraitCollection)
@@ -19,3 +20,4 @@ extension UIToolbar {
     }
   }
 }
+#endif

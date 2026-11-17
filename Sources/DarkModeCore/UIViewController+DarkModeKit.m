@@ -21,7 +21,9 @@
   if (@available(iOS 13, *))
     return;
 
+#if !TARGET_OS_TV
   [self setNeedsStatusBarAppearanceUpdate];
+#endif
   [[self presentedViewController] dmTraitCollectionDidChange:previousTraitCollection];
   [[self childViewControllers] enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull child, NSUInteger idx, BOOL * _Nonnull stop) {
     [child dmTraitCollectionDidChange:previousTraitCollection];

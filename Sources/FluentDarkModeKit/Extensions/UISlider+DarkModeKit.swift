@@ -3,6 +3,7 @@
 //  Licensed under the MIT License.
 //
 
+#if os(iOS)
 extension UISlider {
   override open func dmTraitCollectionDidChange(_ previousTraitCollection: DMTraitCollection?) {
     super.dmTraitCollectionDidChange(previousTraitCollection)
@@ -22,3 +23,4 @@ extension UISlider {
     }
   }
 }
+#endif
